@@ -1,6 +1,7 @@
 ChangeLog
 Locale.pm
 MANIFEST
+MANIFEST.SKIP
 Makefile.PL
-test.pl
 README
+t/00winlocale.t

@@ -1,5 +1,5 @@
 # This -*- perl -*- script writes the Makefile for Win32::Locale
-# Time-stamp: "2001-05-16 21:58:21 MDT"
+# Time-stamp: "2003-07-16 02:27:00 AHDT"
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
 require 5.004;
@@ -9,7 +9,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'	=> 'Win32::Locale',
     'VERSION_FROM' => 'Locale.pm', # finds $VERSION
-    'dist'        => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    'ABSTRACT_FROM' => 'Locale.pm', # 
+    'dist'        => { COMPRESS => 'gzip -6f', SUFFIX => 'gz', },
 );
 
 package MY;

@@ -1,11 +1,10 @@
 
 package Win32::Locale;
-# Time-stamp: "2001-05-27 19:46:03 MDT"
+# Time-stamp: "2003-07-16 02:46:18 AHDT"
 use strict;
 use vars qw($VERSION %MSLocale2LangTag);
-$VERSION = '0.02';
+$VERSION = '0.03';
 %MSLocale2LangTag = (
- # The *-latin and *-cyrillic subtags are my own invention
 
   0x0436 => 'af'   ,  # <AFK> <Afrikaans> <Afrikaans>
   0x041c => 'sq'   ,  # <SQI> <Albanian> <Albanian>
@@ -29,8 +28,8 @@ $VERSION = '0.02';
 
   0x042b => 'hy'   ,  # <HYE> <Armenian> <Armenian>
   0x044d => 'as'   ,  # <ASM> <Assamese> <Assamese>
-  0x042c => 'az-latin'   ,  # <AZE> <Azeri> <Azeri (Latin)>
-  0x082c => 'az-cyrillic',  # <AZC> <Azeri> <Azeri (Cyrillic)>
+  0x042c => 'az-latn',  # <AZE> <Azeri> <Azeri (Latin)>
+  0x082c => 'az-cyrl',  # <AZC> <Azeri> <Azeri (Cyrillic)>
   0x042D => 'eu'   ,  # <EUQ> <Basque> <Basque>
   0x0423 => 'be'   ,  # <BEL> <Belarussian> <Belarussian>
   0x0445 => 'bn'   ,  # <BEN> <Bengali> <Bengali>
@@ -125,8 +124,8 @@ $VERSION = '0.02';
   0x0819 => 'ru-md',  # <RUM> <Russian> <Russian (Moldova)>
   0x043b => 'se'   ,  # <SZI> <Sami> <Sami (Lappish)>  assuming == "Northern Sami"
   0x044f => 'sa'   ,  # <SAN> <Sanskrit> <Sanskrit>
-  0x0c1a => 'sr',       # <SRB> <Serbian> <Serbian (Cyrillic)>
-  0x081a => 'sr-latin', # <SRL> <Serbian> <Serbian (Latin)>
+  0x0c1a => 'sr-cyrl', # <SRB> <Serbian> <Serbian (Cyrillic)>
+  0x081a => 'sr-latn', # <SRL> <Serbian> <Serbian (Latin)>
   0x0459 => 'sd'   ,  # <SND> <Sindhi> <Sindhi>
   0x041b => 'sk'   ,  # <SKY> <Slovak> <Slovak>
   0x0424 => 'sl'   ,  # <SLV> <Slovenian> <Slovenian>
@@ -167,8 +166,8 @@ $VERSION = '0.02';
   0x0422 => 'uk'   ,  # <UKR> <Ukrainian> <Ukrainian>
   0x0420 => 'ur-pk',  # <URD> <Urdu> <Urdu (Pakistan)>
   0x0820 => 'ur-in',  # <URI> <Urdu> <Urdu (India)>
-  0x0443 => 'uz-latin'   ,  # <UZB> <Uzbek> <Uzbek (Latin)>
-  0x0843 => 'uz-cyrillic',  # <UZC> <Uzbek> <Uzbek (Cyrillic)>
+  0x0443 => 'uz-latn',  # <UZB> <Uzbek> <Uzbek (Latin)>
+  0x0843 => 'uz-cyrl',  # <UZC> <Uzbek> <Uzbek (Cyrillic)>
   0x0433 => 'ven'  ,  # <VEN> <Venda> <Venda>
   0x042a => 'vi'   ,  # <VIT> <Vietnamese> <Vietnamese>
   0x0434 => 'xh'   ,  # <XHS> <Xhosa> <Xhosa>
@@ -235,7 +234,7 @@ __END__
 
 =head1 NAME
 
-Win32::Locale -- get the current MSWin locale or language
+Win32::Locale - get the current MSWin locale or language
 
 =head1 SYNOPSIS
 
@@ -342,7 +341,7 @@ L<Locale::Maketext|Locale::Maketext>.
 
 =head1 COPYRIGHT AND DISCLAIMER
 
-Copyright (c) 2001 Sean M. Burke.  All rights reserved.
+Copyright (c) 2001,2003 Sean M. Burke.  All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
