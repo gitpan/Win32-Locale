@@ -1,6 +1,10 @@
 Revision history for Perl extension Win32::Locale
-                                        Time-stamp: "2001-05-16 21:56:09 MDT"
+                                        Time-stamp: "2001-05-27 19:29:33 MDT"
 
+2001-05-17  Sean M. burke  sburke@cpan.org
+
+	* Release 0.02 -- corrects UK English from 'en-UK' to 'en-GB'
+	
 2001-05-16  Sean M. Burke  sburke@cpan.org
 
 	* Release 0.01 -- first release

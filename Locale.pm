@@ -1,9 +1,9 @@
 
 package Win32::Locale;
-# Time-stamp: "2001-05-16 21:55:20 MDT"
+# Time-stamp: "2001-05-27 19:46:03 MDT"
 use strict;
 use vars qw($VERSION %MSLocale2LangTag);
-$VERSION = '0.01';
+$VERSION = '0.02';
 %MSLocale2LangTag = (
  # The *-latin and *-cyrillic subtags are my own invention
 
@@ -51,7 +51,7 @@ $VERSION = '0.01';
   0x0813 => 'nl-be',  # <NLB> <Dutch> <Dutch (Belgium)>
   
   0x0409 => 'en-us',  # <ENU> <English> <English (United States)>
-  0x0809 => 'en-uk',  # <ENG> <English> <English (United Kingdom)>
+  0x0809 => 'en-gb',  # <ENG> <English> <English (United Kingdom)>
   0x0c09 => 'en-au',  # <ENA> <English> <English (Australia)>
   0x1009 => 'en-ca',  # <ENC> <English> <English (Canada)>
   0x1409 => 'en-nz',  # <ENZ> <English> <English (New Zealand)>
@@ -208,7 +208,7 @@ sub get_locale {
   my $lang = get_language(@_);
   return unless $lang and $lang =~ m/^[a-z]{2}(?:-[a-z]{2})?$/s;
   
-  # should be try to turn "fi" into "fi_FI"?
+  # should we try to turn "fi" into "fi_FI"?
   
   $lang =~ tr/-/_/;
   return $lang;
@@ -337,6 +337,7 @@ in its finer details (like Konkani being "kok").
 =head1 SEE ALSO
 
 L<I18N::LangTags|I18N::LangTags>,
+L<I18N::LangTags::List|I18N::LangTags::List>,
 L<Locale::Maketext|Locale::Maketext>.
 
 =head1 COPYRIGHT AND DISCLAIMER
@@ -366,3 +367,4 @@ Sean M. Burke C<sburke@cpan.org>
 =cut
 
 # No big whoop.
+
