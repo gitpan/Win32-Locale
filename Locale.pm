@@ -1,9 +1,9 @@
 
 package Win32::Locale;
-# Time-stamp: "2003-07-16 02:46:18 AHDT"
+# Time-stamp: "2004-01-11 18:56:06 AST"
 use strict;
 use vars qw($VERSION %MSLocale2LangTag);
-$VERSION = '0.03';
+$VERSION = '0.04';
 %MSLocale2LangTag = (
 
   0x0436 => 'af'   ,  # <AFK> <Afrikaans> <Afrikaans>
@@ -199,7 +199,9 @@ sub get_ms_locale {
 }
 
 sub get_language {
-  return $MSLocale2LangTag{ $_[0] || get_ms_locale() };
+  my $lang = $MSLocale2LangTag{ $_[0] || get_ms_locale() || '' };
+  return unless $lang;
+  return $lang;
 }
 
 sub get_locale {
